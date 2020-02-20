@@ -52,7 +52,7 @@ ip dhcp excluded-address 192.168.1.1 192.168.1.10
 ```bash
 python3 main.py
 ```
-![Menu](https://zupimages.net/up/20/08/qxq9.png)
+![Menu](https://zupimages.net/up/20/08/3qz3.png)
 
 ## Quelques exemples
 
