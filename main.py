@@ -178,7 +178,7 @@ def uptime():
 # Affichage du menu
 def menu():
     print (banner() + """\033[96m
- [*] Manage your switchs & routers [*]
+ [*] Manage your switches & routers [*]
 
    [1]--Check Uptime on all devices
    [2]--Backup all configuration
