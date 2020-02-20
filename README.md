@@ -60,7 +60,7 @@ python3 main.py
 
 ![GNS3](https://zupimages.net/up/20/08/ajrj.png)
 
- - **Backup des configuration** :
+ - **Backup des configurations** :
  
 **Les backups sont sauvegardés au format txt dans le dossier backups :**
 
@@ -76,7 +76,7 @@ python3 main.py
  
  ![dhcp](https://zupimages.net/up/20/08/q69s.png)
  
- Notre **routeur** se voit correctement assigné l'**adresse IP** :
+ Notre **routeur** se voit correctement assigner l'**adresse IP** :
  
  ![ip](https://zupimages.net/up/20/08/6ref.png)
  
