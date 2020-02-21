@@ -42,7 +42,7 @@ Exemple **dhcp_pool** :
 ip dhcp pool NAME_POOL
 network 192.168.1.0 255.255.255.0
 dns-server 8.8.8.8
-default-router 192.168.0.1
+default-router 192.168.1.1
 exit
 ip dhcp excluded-address 192.168.1.1 192.168.1.10
 ```
