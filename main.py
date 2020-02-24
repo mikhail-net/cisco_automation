@@ -61,7 +61,7 @@ def get_ip_dhcp(ip):
 
 # Création des dossiers de backup avec l'hostname
 def create_all_files(ip_address):
-    path_backup = "backups/{0}".format(get_hostname)
+    path_backup = "backups/{0}".format(get_hostname())
     # droits d'accès
     rights = 0o755
     if not os.path.isdir(path_backup):
