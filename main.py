@@ -85,7 +85,7 @@ def enable_md5():
     # Vérification de l'enable password
     if check[1] == "password":
         pass_type5 = getpass(show_input('Choose a strong password : '))
-        enable = ['no enable password', 'enable secret %s' % (pass_type5)]
+        enable = ['no enable password', 'enable secret {0}'.format(pass_type5)]
         conf_t = net_connect.send_config_set(enable)
         show_info("enable secret activated")
         # Demande de write la conf
