@@ -5,7 +5,7 @@
 
 # Cisco-Automation
 
-Cet outil a pour but d'**automatiser certaines tâches sur des équipements cisco**.
+Cet outil a pour but d'**automatiser certaines tâches sur des équipements cisco**. (testé sur un routeur C7200)
 
 ## Pré-requis
 
