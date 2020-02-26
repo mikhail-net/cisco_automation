@@ -126,46 +126,38 @@ def get_version():
 
 # Configure un pool DHCP sur la cible
 def dhcp_pool(ip):
-    try:
-        show_result("Reading dhcp_pool file...")
-        net_connect = Netmiko(**get_dic(ip))
-        print("-------------------------------------------------")
-        net_connect.enable()
-        # Envoie la configuration du fichier dhcp_pool
-        net_connect.send_config_from_file("dhcp_pool")
-        show_result("DHCP pool configured !")
-        # Demande de write la conf
-        save = input(show_input("Do you want to write configuration ? (y/n) : "))
-        if save == "y" or save == "yes":
-            write_conf(ip)
-        end_task()
-        print("-------------------------------------------------")
-    except:
-        show_info("host [{0}] unreachable".format(ip_address))
-        end_task()
+    show_result("Reading dhcp_pool file...")
+    net_connect = Netmiko(**get_dic(ip))
+    print("-------------------------------------------------")
+    net_connect.enable()
+    # Envoie la configuration du fichier dhcp_pool
+    net_connect.send_config_from_file("dhcp_pool")
+    show_result("DHCP pool configured !")
+    # Demande de write la conf
+    save = input(show_input("Do you want to write configuration ? (y/n) : "))
+    if save == "y" or save == "yes":
+        write_conf(ip)
+    end_task()
+    print("-------------------------------------------------")
 
 # Configuration de l'interface ciblée en DHCP
 def dhcp_client(ip):
-    try:
-        interface = input(show_input("Specify target interface : "))
-        net_connect = Netmiko(**get_dic(ip))
-        print("-------------------------------------------------")
-        net_connect.enable()
-        enable = [interface, 'ip address dhcp', 'no sh']
-        conf_t = net_connect.send_config_set(enable)
-        print(conf_t)
-        print("-------------------------------------------------")
-        # Affiche l'IP reçue par le DHCP
-        show_result("You got {0} from DHCP".format(get_ip_dhcp(ip)))
-        # Demande de write la conf
-        save = input(show_input("Do you want to write configuration ? (y/n) : "))
-        if save == "y" or save == "yes":
-            write_conf(ip)
-        end_task()
-        print("-------------------------------------------------")
-    except:
-        show_info("host [{0}] unreachable".format(ip_address))
-        end_task()
+    interface = input(show_input("Specify target interface : "))
+    net_connect = Netmiko(**get_dic(ip))
+    print("-------------------------------------------------")
+    net_connect.enable()
+    enable = [interface, 'ip address dhcp', 'no sh']
+    conf_t = net_connect.send_config_set(enable)
+    print(conf_t)
+    print("-------------------------------------------------")
+    # Affiche l'IP reçue par le DHCP
+    show_result("You got {0} from DHCP".format(get_ip_dhcp(ip)))
+    # Demande de write la conf
+    save = input(show_input("Do you want to write configuration ? (y/n) : "))
+    if save == "y" or save == "yes":
+        write_conf(ip)
+    end_task()
+    print("-------------------------------------------------")
 
 # uptime + stocke dans un fichier .txt dans le dossier results
 def uptime():
