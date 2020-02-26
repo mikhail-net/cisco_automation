@@ -200,6 +200,10 @@ elif choice == "0":
     os.system('clear'), sys.exit()
 elif choice == "":
     menu()
+elif not int(choice) in range(0, 10):
+    menu()
+    show_info("Choix indisponible !")
+    sys.exit()
 
 # Boucle sur les cibles présentes dans router.list
 for line in config.router_list:
