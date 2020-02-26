@@ -9,7 +9,7 @@ Cet outil a pour but d'**automatiser certaines tâches sur des équipements cisc
 
 ## Compatibilité
 
-- :white_check_mark: C7200
+- :white_check_mark: **C7200**
 - ?
 - ?
 - ?
