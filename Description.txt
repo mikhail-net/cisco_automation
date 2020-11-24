@@ -1,1 +1,0 @@
-Le but du challenge est de retrouver le flag caché dans cette configuration Cisco !
